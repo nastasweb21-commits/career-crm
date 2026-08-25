@@ -21,15 +21,15 @@
             <span class="stat-value" id="total-companies">15</span>
           </div>
           <div class="stat-box">
-            <span class="stat-label">A Companies</span>
+            <span class="stat-label">A</span>
             <span class="stat-value a-tier" id="a-companies">6</span>
           </div>
           <div class="stat-box">
-            <span class="stat-label">B Companies</span>
+            <span class="stat-label">B</span>
             <span class="stat-value b-tier" id="b-companies">6</span>
           </div>
           <div class="stat-box">
-            <span class="stat-label">C Companies</span>
+            <span class="stat-label">C</span>
             <span class="stat-value c-tier" id="c-companies">3</span>
           </div>
         </div>
@@ -42,32 +42,31 @@
         <div class="filter-group">
           <label for="priority-filter">Priority:</label>
           <select id="priority-filter">
-            <option value="">All Priorities</option>
+            <option value="">All</option>
             <option value="A">A — Very Desired</option>
             <option value="B">B — Strong Option</option>
-            <option value="C">C — Portfolio/Agency</option>
+            <option value="C">C — Portfolio</option>
           </select>
         </div>
 
         <div class="filter-group">
           <label for="format-filter">Format:</label>
           <select id="format-filter">
-            <option value="">All Formats</option>
+            <option value="">All</option>
             <option value="Hybrid">Hybrid</option>
             <option value="Remote">Remote</option>
             <option value="Office">Office</option>
-            <option value="Unknown">Unknown</option>
           </select>
         </div>
 
         <div class="filter-group">
           <label for="size-filter">Size:</label>
           <select id="size-filter">
-            <option value="">All Sizes</option>
+            <option value="">All</option>
             <option value="10-49">Small (10-49)</option>
             <option value="50-249">Medium (50-249)</option>
             <option value="201-500">Large (201-500)</option>
-            <option value="500-1000">Very Large (500-1000)</option>
+            <option value="500-1000">XL (500-1000)</option>
             <option value="1000">Enterprise (1000+)</option>
           </select>
         </div>
@@ -76,7 +75,7 @@
           <input 
             type="text" 
             id="search-input" 
-            placeholder="🔍 Search company..."
+            placeholder="🔍 Search..."
             class="search-input"
           >
         </div>
@@ -88,9 +87,9 @@
     <!-- SORT OPTIONS -->
     <section class="sort-section">
       <div class="sort-buttons">
-        <button class="sort-btn active" data-sort="priority">Sort by Priority</button>
-        <button class="sort-btn" data-sort="score">Sort by Score</button>
-        <button class="sort-btn" data-sort="name">Sort A-Z</button>
+        <button class="sort-btn active" data-sort="priority">Priority</button>
+        <button class="sort-btn" data-sort="score">Score</button>
+        <button class="sort-btn" data-sort="name">A-Z</button>
       </div>
     </section>
 
@@ -128,16 +127,16 @@
       </div>
     </section>
 
-    <!-- COMPANIES LIST -->
+    <!-- COMPANIES GRID -->
     <section class="companies-section">
       <div id="companies-container" class="companies-container">
-        <!-- Companies будуть динамічно завантажені тут -->
+        <!-- Companies будуть завантажені тут -->
       </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-      <p>Last updated: <span id="last-updated">2024-08-25</span> | Data saved locally in browser</p>
+      <p>Last updated: <span id="last-updated">2024-08-25</span></p>
     </footer>
   </div>
 
