@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career CRM — Product/UX Job Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-title">
+          <h1>🎯 Career CRM</h1>
+          <p>Product/UX Designer Job Search System</p>
+        </div>
+        <div class="header-stats">
+          <div class="stat-box">
+            <span class="stat-label">Total</span>
+            <span class="stat-value" id="total-companies">15</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">A Companies</span>
+            <span class="stat-value a-tier" id="a-companies">6</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">B Companies</span>
+            <span class="stat-value b-tier" id="b-companies">6</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">C Companies</span>
+            <span class="stat-value c-tier" id="c-companies">3</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- FILTERS & SEARCH -->
+    <section class="filters-section">
+      <div class="filters-container">
+        <div class="filter-group">
+          <label for="priority-filter">Priority:</label>
+          <select id="priority-filter">
+            <option value="">All Priorities</option>
+            <option value="A">A — Very Desired</option>
+            <option value="B">B — Strong Option</option>
+            <option value="C">C — Portfolio/Agency</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="format-filter">Format:</label>
+          <select id="format-filter">
+            <option value="">All Formats</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Remote">Remote</option>
+            <option value="Office">Office</option>
+            <option value="Unknown">Unknown</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="size-filter">Size:</label>
+          <select id="size-filter">
+            <option value="">All Sizes</option>
+            <option value="10-49">Small (10-49)</option>
+            <option value="50-249">Medium (50-249)</option>
+            <option value="201-500">Large (201-500)</option>
+            <option value="500-1000">Very Large (500-1000)</option>
+            <option value="1000">Enterprise (1000+)</option>
+          </select>
+        </div>
+
+        <div class="filter-group search">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="🔍 Search company..."
+            class="search-input"
+          >
+        </div>
+
+        <button id="reset-filters" class="btn-reset">↻ Reset</button>
+      </div>
+    </section>
+
+    <!-- SORT OPTIONS -->
+    <section class="sort-section">
+      <div class="sort-buttons">
+        <button class="sort-btn active" data-sort="priority">Sort by Priority</button>
+        <button class="sort-btn" data-sort="score">Sort by Score</button>
+        <button class="sort-btn" data-sort="name">Sort A-Z</button>
+      </div>
+    </section>
+
+    <!-- DASHBOARD STATS -->
+    <section class="dashboard-stats">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-icon">📧</span>
+          <div class="stat-info">
+            <p class="stat-title">Contacted</p>
+            <p class="stat-number" id="stat-contacted">0</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">✅</span>
+          <div class="stat-info">
+            <p class="stat-title">Replied</p>
+            <p class="stat-number" id="stat-replied">0</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">📞</span>
+          <div class="stat-info">
+            <p class="stat-title">Interviews</p>
+            <p class="stat-number" id="stat-interviews">0</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">🧪</span>
+          <div class="stat-info">
+            <p class="stat-title">Trials</p>
+            <p class="stat-number" id="stat-trials">0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANIES LIST -->
+    <section class="companies-section">
+      <div id="companies-container" class="companies-container">
+        <!-- Companies будуть динамічно завантажені тут -->
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Last updated: <span id="last-updated">2024-08-25</span> | Data saved locally in browser</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
